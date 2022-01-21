@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className = "container">
+            <div className = "app">
+                <div className = "question-section">
+                    <h1 className = "question-header">1/4</h1>
+                    <div className = "question-text">일론 머스크의 우주 탐사 기업 이름은?</div>
+                </div>
+                <div className = "answer-section">
+                    <button>스페이스 엑스</button>
+                    <button>테슬라</button>
+                    <button>보링 컴퍼니</button>
+                    <button>솔라시티</button>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;

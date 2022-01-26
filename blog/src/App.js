@@ -43,16 +43,6 @@ function App() {
 
     const convertedScore = Math.floor((score / quizzes.length) * 100);
 
-    const quiz = {
-        question: "일론 머스크의 우주 탐사 기업 이름은?",
-        answers: [
-            {text: "스페이스 엑스" , isCorrect: true},
-            {text: "테슬라", isCorrect: false},
-            {text: "보림 컴퍼니" , isCorrect : false},
-            {text: "솔라시티" , isCorrect: false},
-        ],
-    };
-
     const handleClick = (isCorrect) =>{
         if(isCorrect){
             setScore(score => score + 1);

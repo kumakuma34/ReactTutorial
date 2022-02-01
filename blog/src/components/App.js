@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import { QUIZZES } from "../constants";
 import "../App.css";
 import Button from "./Button";
+import Container from "./Container";
+import { ThemeProvider } from "styled-components";
+import theme from "../theme";
 
 function App() {
     const [currentNo, setCurrentNo] = useState(0);
@@ -25,7 +28,8 @@ function App() {
         }
     }
     return (
-        <div className = "container">
+        <ThemeProvider theme={theme}>
+            <div className = "container">
             {showResult ?(
                 <div className = "app">
                     <h1 className = "result-header">당신의 점수는?</h1>
@@ -48,7 +52,9 @@ function App() {
                 </div>
             </div>
             )}
-        </div>
+         </div>
+        </ThemeProvider>
+        
     );
 }
 
